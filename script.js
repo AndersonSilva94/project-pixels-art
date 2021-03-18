@@ -7,7 +7,7 @@ function createColorsPallete(amount) {
     divColors.appendChild(colors);
   }
 }
-createColorsPallete(4);
+createColorsPallete(10);
 
 function assignColors() {
   const colors = document.querySelectorAll('.color');
@@ -78,6 +78,7 @@ clearBoxes();
 function insertValueBoard() {
   const inputText = document.getElementsByTagName('input')[0];
   inputText.id = 'board-size';
+  inputText.placeholder = 'Digite um valor (5 - 15)'
   const buttonNumberPixel = document.querySelectorAll('button')[1];
   buttonNumberPixel.id = 'generate-board';
   buttonNumberPixel.innerText = 'VQV';
@@ -85,8 +86,8 @@ function insertValueBoard() {
     if (inputText.value === '') {
       alert('Board inválido!');
       inputText.value = 5;
-    } else if (inputText.value > 50) {
-      inputText.value = 50;
+    } else if (inputText.value > 15) {
+      inputText.value = 15;
     } else if (inputText.value < 5) {
       inputText.value = 5;
     }
