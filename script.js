@@ -54,7 +54,7 @@ function createPixelBox(amount = 5) {
 createPixelBox();
 
 document.querySelectorAll('.color')[0].className += ' selected';
-t
+
 function changeSelected() {
   const classSelected = document.querySelector('#color-palette');
   const classSelected2 = document.querySelector('#color-palette2');

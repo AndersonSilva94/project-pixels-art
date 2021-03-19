@@ -12,6 +12,7 @@ body {
   background-image: url(img/adventure-time-pixel.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 p{
