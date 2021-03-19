@@ -54,8 +54,7 @@ function createPixelBox(amount = 5) {
 createPixelBox();
 
 document.querySelectorAll('.color')[0].className += ' selected';
-
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A na explicação sobre event
+t
 function changeSelected() {
   const classSelected = document.querySelector('#color-palette');
   const classSelected2 = document.querySelector('#color-palette2');
@@ -72,7 +71,6 @@ function changeSelected() {
 }
 changeSelected();
 
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A na explicação sobre event
 function changeColorBox() {
   pixelBoard.addEventListener('click', (event) => {
     const boxPixel = event.target;
@@ -97,7 +95,6 @@ function clearBoxes() {
 }
 clearBoxes();
 
-// Ajuda mútua, em especial ao Lucas Godoi - turma 10 - tribo A na criação do if
 function insertValueBoard() {
   const inputText = document.getElementsByTagName('input')[0];
   inputText.id = 'board-size';
@@ -105,7 +102,14 @@ function insertValueBoard() {
   const buttonNumberPixel = document.querySelectorAll('button')[1];
   buttonNumberPixel.id = 'generate-board';
   buttonNumberPixel.innerText = 'VQV';
-  buttonNumberPixel.addEventListener('click', () => {
+  inputText.addEventListener('keyup', (e) => {
+    if(e.key === 'Enter'){
+      returnValueInput();
+    }
+  })
+  buttonNumberPixel.addEventListener('click', returnValueInput);
+
+  function returnValueInput() {
     if (inputText.value === '') {
       alert('Board inválido!');
       inputText.value = 5;
@@ -116,6 +120,6 @@ function insertValueBoard() {
     }
     pixelBoard.innerHTML = '';
     createPixelBox(inputText.value);
-  });
+  }
 }
 insertValueBoard();
