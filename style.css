@@ -1,16 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(img/adventure-time-pixel.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-right: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}
+
+button {
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(173, 1, 173);
+  box-shadow: 2px 2px 2px gray;
+}
+
+#main {
+  margin: 20px 0;
+  padding: 30px;
+  background-color: rgba(255, 228, 196, .8);
+  border-radius: 10px;
+}
+
+#title {
+  text-align: center;
+  margin: 20px 0;
+  background-color: purple;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 2px 2px 2px gray;
+}
+
+#workspace {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#color-palette, #color-palette2, #pixel-board {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
 .color {
   display: inline-block;
-  border: 1px solid black;
-  padding: 30px;
-  margin-left: 10px;
+  padding: 25px;
+}
+
+.color:hover {
+  transform: scale(1.8);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .pixel {
   background-color: white;
-  display: table-cell;
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border: 1px solid gray;
 }
 
 #clear-board {
