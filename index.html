@@ -5,21 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Pixels Art - Andy Silva</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="title">
-    <h1>Paleta de Cores</h1>
-  </header>
-  <section id="workspace">
-    <div id="color-palette"></div>
-    <section id="buttons">
-      <button></button>
-      <input type="number" min="1">
-      <button></button>
+  <div id="main">
+    <header id="title">
+      <h1>Paleta de Cores</h1>
+    </header>
+    <section id="workspace">
+      <p>Cores básicas:</p>
+      <div id="color-palette" class="color-pallete"></div>
+      <p>Cores aleatórias: (basta recarregar a página ;D )</p>
+      <div id="color-palette2" class="color-pallete"></div>
+      <section id="buttons">
+        <button></button>
+        <input type="number" min="1">
+        <button></button>
+      </section>
+      <div id="pixel-board"></div>
     </section>
-    <div id="pixel-board"></div>
-  </section>
+  </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
